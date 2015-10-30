@@ -10,4 +10,6 @@ echo " -- Starting ${CACHE_TYPE} cache server -- " >&2
 
 sed -ri"" "s/include vhosts[^;]*;/include vhosts\/lancache-${CACHE_TYPE}.conf;/" /etc/nginx/nginx.conf
 
-exec nginx
+exec nginx &
+/bin/bash
+#$IP = /sbin/ifconfig -a | grep -A 8 eth0 | grep inet | head -1 | awk '{print $2}'

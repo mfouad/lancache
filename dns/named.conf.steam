@@ -1,0 +1,16 @@
+// re-run it commenting relevant domains if you dont cache them all
+zone "cs.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
+zone "content1.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
+zone "content2.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
+zone "content3.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
+zone "content4.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
+zone "content5.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
+zone "content6.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
+zone "content7.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
+zone "content8.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
+zone "content9.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
+zone "hsar.steampowered.com.edgesuite.net" { type master; notify no; file "/etc/bind/db.steam"; };
+zone "akamai.steamstatic.com" { type master; notify no; file "/etc/bind/db.steam"; };
+zone "content-origin.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
+zone "client-download.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
+// EOF
