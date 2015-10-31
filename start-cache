@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo " -- Starting DNS server -- " >&2
+
+# start DNS
+/usr/sbin/named -u bind -g &
+
+
 : ${CACHE_TYPE:=default}
 if [ ! -f /etc/nginx/vhosts/lancache-${CACHE_TYPE}.conf ]; then
 	echo "Cannot locate vhost '${CACHE_TYPE}'" >&2
@@ -10,6 +16,7 @@ echo " -- Starting ${CACHE_TYPE} cache server -- " >&2
 
 sed -ri"" "s/include vhosts[^;]*;/include vhosts\/lancache-${CACHE_TYPE}.conf;/" /etc/nginx/nginx.conf
 
-exec nginx &
+# start Cache server
+nginx &
 /bin/bash
 #$IP = /sbin/ifconfig -a | grep -A 8 eth0 | grep inet | head -1 | awk '{print $2}'

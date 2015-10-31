@@ -8,9 +8,6 @@
 
 
 // Production forward Zone
-zone "liquidsky.local" 					{ type master; file "/etc/bind/db.liquidsky.local";};
-
 // Production reverse Zone
-zone "209.122.159.in-addr.arpa" {	type master;	file "/var/lib/bind/db.159";};
 
-include "/etc/bind/named.conf.steam"
+include "/etc/bind/named.conf.steam";

@@ -1,8 +1,10 @@
 FROM ubuntu:trusty
+MAINTAINER mfouad
 
 # update base system
-RUN apt-get update && \
-    apt-get -y dist-upgrade
+RUN apt-get update
+#&& \
+#    apt-get -y dist-upgrade
 
 # install nginx
 RUN apt-get install -y software-properties-common && \
@@ -22,9 +24,10 @@ ADD vhosts/      /etc/nginx/vhosts
 ADD start-cache  /usr/local/bin/start-cache
 
 # Install BIND9 DNS server
-RUN apt-get install -y bind9 bind9utils
-ADD dns/*  /etc/bind9/
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y bind9 bind9utils
+ADD dns/*  /etc/bind/
+RUN chown root:bind /etc/bind/*
 
-EXPOSE 80 58
+EXPOSE 80 53/udp
 # configure nginx boot
 CMD ["start-cache"]
