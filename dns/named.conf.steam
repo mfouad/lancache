@@ -10,7 +10,6 @@ zone "content7.steampowered.com" { type master; notify no; file "/etc/bind/db.st
 zone "content8.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
 zone "content9.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
 zone "hsar.steampowered.com.edgesuite.net" { type master; notify no; file "/etc/bind/db.steam"; };
-zone "akamai.steamstatic.com" { type master; notify no; file "/etc/bind/db.steam"; };
 zone "content-origin.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
 zone "client-download.steampowered.com" { type master; notify no; file "/etc/bind/db.steam"; };
 // EOF

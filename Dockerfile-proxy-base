@@ -1,6 +1,22 @@
 
-FROM proxy:0.1
+FROM ubuntu:trusty
 MAINTAINER mfouad
+
+# update base system
+RUN apt-get update
+#&& \
+#    apt-get -y dist-upgrade
+
+# install nginx
+RUN apt-get install -y software-properties-common && \
+    add-apt-repository ppa:nginx/stable && \
+    apt-get update && \
+    apt-get install -y nginx
+
+# Install BIND9 DNS server
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y bind9 bind9utils
+
+#-------------------
 
 # create cache directories
 RUN mkdir -p /srv/www/cache/installs && \

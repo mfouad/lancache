@@ -3,7 +3,7 @@
 ;
 $TTL    604800
 @       IN      SOA     localhost. root.localhost. (
-                              9         ; Serial
+                              10         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
@@ -11,5 +11,5 @@ $TTL    604800
 ;
 
 @       IN      NS      localhost.
-        IN      A       192.168.8.4
-*       IN      A       192.168.8.4
+        IN      A       192.168.8.23
+*       IN      A       192.168.8.23

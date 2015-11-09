@@ -7,7 +7,8 @@ DNSS="steam"
 DOMAINS=""
 
 # comment this if you dont cache steam
-DOMAINS="$DOMAINS cs.steampowered.com content1.steampowered.com content2.steampowered.com content3.steampowered.com content4.steampowered.com content5.steampowered.com content6.steampowered.com content7.steampowered.com content8.steampowered.com content9.steampowered.com hsar.steampowered.com.edgesuite.net akamai.steamstatic.com content-origin.steampowered.com client-download.steampowered.com"
+DOMAINS="$DOMAINS cs.steampowered.com content1.steampowered.com content2.steampowered.com content3.steampowered.com content4.steampowered.com content5.steampowered.com content6.steampowered.com content7.steampowered.com content8.steampowered.com content9.steampowered.com hsar.steampowered.com.edgesuite.net content-origin.steampowered.com client-download.steampowered.com"
+# akamai.steamstatic.com 
 # comment this if you dont cache ubuntu
 # DOMAINS="$DOMAINS fr.archive.ubuntu.com security.ubuntu.com"
 
